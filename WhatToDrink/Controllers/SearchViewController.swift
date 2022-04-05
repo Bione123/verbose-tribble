@@ -28,6 +28,18 @@ class SearchViewController : UIViewController ,UITableViewDelegate, UITableViewD
     
     override func viewWillAppear(_ animated: Bool) {
         BarraRicerca.becomeFirstResponder()
+        let urlString = NetworkManager.share.urlSearch + "a"
+        let url = URL(string: urlString)!
+        NetworkManager.getData(url: url) { Bevanda in
+            print(Bevanda.drinks.count)
+            self.cocktail = Bevanda
+            DispatchQueue.main.async {
+                self.CocktailList.reloadData()
+            }
+        } errore: { error in
+            print(error)
+        }
+        
     }
     // ritorno tanti drink quanti ce ne sono nell'array drinks che all'inizio è vuoto
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,17 +55,18 @@ class SearchViewController : UIViewController ,UITableViewDelegate, UITableViewD
     }
     // funzione per la barra di ricerca che filtra i cocktail per nome
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         if let search = searchBar.text {
             let urlString = NetworkManager.share.urlSearch + search
             let url = URL(string: urlString)!
-            print(url,search)
+            print(url)
             NetworkManager.getData(url: url) { Bevanda in
                 print(Bevanda.drinks.count)
                 self.cocktail = Bevanda
                 DispatchQueue.main.async {
                     self.CocktailList.reloadData()
                 }
-                
+
             } errore: { error in
                 print(error)
             }
@@ -65,6 +78,7 @@ class SearchViewController : UIViewController ,UITableViewDelegate, UITableViewD
         drinkToPass = cocktail?.drinks[indexPath.row]
         
         self.performSegue(withIdentifier: "dettagli", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -73,5 +87,5 @@ class SearchViewController : UIViewController ,UITableViewDelegate, UITableViewD
             detailVC.drink = drinkToPass
         }
     }
-
+    
 }

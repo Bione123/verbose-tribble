@@ -9,18 +9,21 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var logoImg: UIImageView!
     @IBOutlet weak var imgShake: UIImageView!
     var cocktailToPass : Cocktail?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-     
+        
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        
         let imageName = "shake"
-        let image = UIImage(named: imageName)
-        imgShake.image = image
+        imgShake.image = UIImage(named: imageName)
+        
+        let logoImage = "wine-glasses"
+        logoImg.image = UIImage(named: logoImage)
        
     }
     // funzione che viene chiamata prima del perform segue

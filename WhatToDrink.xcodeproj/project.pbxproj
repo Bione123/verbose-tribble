@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		643A504B27E47F0000B99C73 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643A504A27E47F0000B99C73 /* DetailViewController.swift */; };
+		644FD8CD27FB4D0C00D188AC /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644FD8CC27FB4D0C00D188AC /* InfoViewController.swift */; };
 		64619A3727F3380500CEBFC0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 64619A3627F3380500CEBFC0 /* Kingfisher */; };
 		64B8CC4127E1FB4700BA3A93 /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8CC4027E1FB4700BA3A93 /* Cocktail.swift */; };
 		64B8CC4327E3867600BA3A93 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B8CC4227E3867600BA3A93 /* SearchViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		643A504A27E47F0000B99C73 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		644FD8CC27FB4D0C00D188AC /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		64B8CC4027E1FB4700BA3A93 /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		64B8CC4227E3867600BA3A93 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		64B8CC4427E3872700BA3A93 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		643A504C27E47F1500B99C73 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				644FD8CC27FB4D0C00D188AC /* InfoViewController.swift */,
 				64CA027227CA3C1D00E34BCA /* HomeViewController.swift */,
 				64B8CC4227E3867600BA3A93 /* SearchViewController.swift */,
 				643A504A27E47F0000B99C73 /* DetailViewController.swift */,
@@ -173,6 +176,7 @@
 				64B8CC4327E3867600BA3A93 /* SearchViewController.swift in Sources */,
 				64CA028327CA3D4D00E34BCA /* NetworkManager.swift in Sources */,
 				64CA027327CA3C1D00E34BCA /* HomeViewController.swift in Sources */,
+				644FD8CD27FB4D0C00D188AC /* InfoViewController.swift in Sources */,
 				64CA026F27CA3C1D00E34BCA /* AppDelegate.swift in Sources */,
 				64B8CC4127E1FB4700BA3A93 /* Cocktail.swift in Sources */,
 				64CA027127CA3C1D00E34BCA /* SceneDelegate.swift in Sources */,
